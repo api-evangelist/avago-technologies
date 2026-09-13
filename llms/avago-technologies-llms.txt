@@ -1,0 +1,38 @@
+# Avago Technologies
+
+> Avago Technologies Limited is a RETIRED corporate brand. It is not a subsidiary of Broadcom — it is
+> Broadcom's legal predecessor and former name. On 1 February 2016 Avago Technologies Limited completed
+> its $37 billion acquisition of Broadcom Corporation and renamed itself Broadcom Limited, today
+> Broadcom Inc. (NASDAQ: AVGO). There is no Avago developer program, no Avago API, and no Avago
+> documentation. If you are looking for an API, go to Broadcom.
+
+## Status
+
+- Brand status: retired / renamed (2016-02-01)
+- Successor entity: Broadcom Inc. — https://www.broadcom.com/
+- avagotech.com: HTTP 301 to https://www.broadcom.com/ on every path (probed 2026-09-13)
+- avago.com: NOT a company site — a third-party domain-brokerage landing page (probed 2026-09-13, HTTP 200)
+- GitHub organization: none (api.github.com/orgs/avagotech -> 404)
+- Packages: no first-party SDK on npm, PyPI, Maven Central, NuGet, RubyGems or crates.io
+- Machine-readable contracts: none under the Avago name (no OpenAPI, AsyncAPI, GraphQL, gRPC, WSDL, MCP or A2A agent card)
+
+## Where the APIs actually are
+
+- Broadcom (successor entity) provider profile: https://apis.io/providers/broadcom/
+- Broadcom corporate site: https://www.broadcom.com/
+- Broadcom technical documentation: https://techdocs.broadcom.com/
+- Product lines historically branded Avago (LSI and Emulex storage controllers, fiber optics, RF
+  components) are published today under Broadcom and are profiled in the Broadcom record, not here.
+
+## This profile
+
+- apis.json record: https://raw.githubusercontent.com/api-evangelist/avago-technologies/refs/heads/main/apis.yml
+- Domain security probe: security/avago-technologies-domain-security.yml
+- Discovery probe record (.well-known + contract discovery): well-known/avago-technologies-well-known.yml
+
+## Provenance
+
+Generated 2026-09-13 by the API Evangelist enrichment pipeline from live probes of avagotech.com and
+avago.com plus public corporate sources (Broadcom investor relations announcement of the Avago/Broadcom
+business combination; Avago Technologies Limited SEC Form 8-K, FY2016). Method: generated. This is an
+independent third-party profile; it is not published by Avago Technologies or Broadcom.

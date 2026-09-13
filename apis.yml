@@ -1,20 +1,76 @@
 aid: avago-technologies
 name: Avago Technologies
-description: 'Avago Technologies is a company surfaced via the API Evangelist harvest backlog (source:
-  absent-parent) and added to the network as a stub for full-pipeline profiling.'
+description: 'Avago Technologies Limited was the Singapore-headquartered semiconductor company spun out
+  of Agilent Technologies'' semiconductor products group in 2005 that acquired Broadcom Corporation for
+  $37 billion on February 1, 2016 and renamed itself Broadcom Limited, today Broadcom Inc. (NASDAQ: AVGO).
+  Avago is therefore not a subsidiary of Broadcom but its legal predecessor and former corporate name.
+  The brand is retired: every path on avagotech.com returns an HTTP 301 to broadcom.com, avago.com is
+  a third-party domain-brokerage landing page rather than a company site, and no Avago-branded developer
+  portal, documentation, OpenAPI, SDK, package or GitHub organization exists. API surfaces once associated
+  with Avago product lines (LSI and Emulex storage controllers, fiber optics, RF) are published today
+  by Broadcom and are profiled under the broadcom record.'
 url: https://raw.githubusercontent.com/api-evangelist/avago-technologies/refs/heads/main/apis.yml
-x-type: company
-x-source: harvest:absent-parent
-x-tier: stub
-x-tier-reason: harvest
 specificationVersion: '0.20'
 created: '2026-09-13'
 modified: '2026-09-13'
 tags:
 - Company
+- Semiconductors
+- Hardware
+- Electronic Components
+- Acquired
+- Legacy Brand
+- Broadcom
+x-type: company
+x-source: harvest:absent-parent
+x-tier: legacy-identity
+x-tier-reason: renamed-to-broadcom
+x-parent: broadcom
+x-relationship: rename
+x-renamed: 2016
+common:
+- type: DomainSecurity
+  url: security/avago-technologies-domain-security.yml
+- type: Website
+  url: https://www.avagotech.com/
+  name: Avago Technologies (redirects to Broadcom)
+  x-note: Blanket HTTP 301 to https://www.broadcom.com/ on every path (probed 2026-09-13).
+- type: ParentCompany
+  url: https://apis.io/providers/broadcom/
+  name: Broadcom
+  x-relationship: rename
+  x-renamed: 2016
+  x-source: https://investors.broadcom.com/news-releases/news-release-details/broadcom-limited-announces-expected-completion-business
+- type: LLMsTxt
+  url: llms/avago-technologies-llms.txt
+  name: Avago Technologies llms.txt
 apis: []
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+x-enrichment:
+  date: '2026-09-13'
+  status: minimal
+  artifacts_added: 3
+  pass: local-v3
+x-coverage:
+  state: none
+  reason: defunct
+  detail: 'Avago Technologies Limited renamed itself Broadcom Limited on 1 February 2016 after acquiring
+    Broadcom Corporation, so the brand has no surface of its own: every path on avagotech.com returns
+    an HTTP 301 to broadcom.com, avago.com is a third-party domain-brokerage landing page, and no Avago
+    GitHub organization, developer portal, package or machine-readable contract exists.'
+  evidence:
+  - url: https://www.avagotech.com/
+    status: 301
+  - url: https://www.avagotech.com/openapi.json
+    status: 301
+  - url: https://www.avagotech.com/.well-known/agent-card.json
+    status: 301
+  - url: https://api.github.com/orgs/avagotech
+    status: 404
+  - url: https://avago.com/
+    status: 200
+  checked: '2026-09-13'

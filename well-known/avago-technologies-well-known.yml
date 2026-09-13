@@ -1,0 +1,108 @@
+generated: '2026-09-13'
+method: probed
+source: live HTTP probes of every host this record knows (www.avagotech.com, avagotech.com)
+note: >-
+  No .well-known document is served by Avago Technologies. avagotech.com is a blanket HTTP 301
+  redirect to https://www.broadcom.com/ on every path, including every /.well-known/ path, so the
+  Avago origin serves no discovery document of its own; the redirect target then returns 404 for
+  each of these paths. Recorded as an absence: no WellKnown or SecurityTxt pointer is wired into
+  apis.yml, because no path returned a 200 carrying a real document. avago.com was deliberately NOT
+  probed as a company host — it resolves to a third-party domain-brokerage landing page
+  ("Strategic-Grade domain names", Webflow/superlander.com assets, x-robots-tag: noindex) and is not
+  controlled by the company.
+hosts:
+- host: www.avagotech.com
+  note: 301 to https://www.broadcom.com/<same path> on every path; no document served.
+  documents:
+  - path: /.well-known/security.txt
+    status: 301
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 301
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 301
+    file: null
+  - path: /.well-known/oauth-protected-resource
+    status: 301
+    file: null
+  - path: /.well-known/api-catalog
+    status: 301
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 301
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 301
+    file: null
+  - path: /.well-known/agent.json
+    status: 301
+    file: null
+- host: avagotech.com
+  note: 301 to https://www.broadcom.com/<same path> on every path; no document served.
+  documents:
+  - path: /.well-known/security.txt
+    status: 301
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 301
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 301
+    file: null
+  - path: /.well-known/oauth-protected-resource
+    status: 301
+    file: null
+  - path: /.well-known/api-catalog
+    status: 301
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 301
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 301
+    file: null
+  - path: /.well-known/agent.json
+    status: 301
+    file: null
+redirect_target_checked:
+  host: www.broadcom.com
+  note: >-
+    Followed the redirect once to confirm nothing is served there under the Avago name. All eight
+    paths returned 404. Broadcom's own .well-known posture is profiled in all/broadcom/, not here.
+  status: 404
+contract_discovery:
+  note: >-
+    STEP 0b run against every host this record knows. No OpenAPI, GraphQL, MCP, A2A, gRPC, WSDL or
+    OGC surface exists under the Avago name.
+  probes:
+  - url: https://www.avagotech.com/openapi.json
+    status: 301
+  - url: https://www.avagotech.com/openapi.yaml
+    status: 301
+  - url: https://www.avagotech.com/swagger.json
+    status: 301
+  - url: https://www.avagotech.com/api-docs
+    status: 301
+  - url: https://www.avagotech.com/docs
+    status: 301
+  - url: https://www.avagotech.com/redoc
+    status: 301
+  - url: https://www.avagotech.com/llms.txt
+    status: 301
+  - url: https://www.avagotech.com/robots.txt
+    status: 301
+  - url: https://www.avagotech.com/sitemap.xml
+    status: 301
+  - url: https://docs.avagotech.com/
+    status: 0
+    note: DNS does not resolve.
+  - url: https://developer.avagotech.com/
+    status: 0
+    note: DNS does not resolve.
+  - url: https://api.avagotech.com/
+    status: 0
+    note: DNS does not resolve.
+  - url: https://api.github.com/orgs/avagotech
+    status: 404
+    note: No Avago GitHub organization exists (nor `avago`; a GitHub org search returns only unrelated accounts).
