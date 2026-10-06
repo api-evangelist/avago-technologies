@@ -12,7 +12,7 @@ description: 'Avago Technologies Limited was the Singapore-headquartered semicon
 url: https://raw.githubusercontent.com/api-evangelist/avago-technologies/refs/heads/main/apis.yml
 specificationVersion: '0.20'
 created: '2026-09-13'
-modified: '2026-09-13'
+modified: '2026-10-06'
 tags:
 - Company
 - Semiconductors
@@ -29,6 +29,8 @@ x-parent: broadcom
 x-relationship: rename
 x-renamed: 2016
 common:
+- url: https://www.broadcom.com/company/news
+  type: Blog
 - type: DomainSecurity
   url: security/avago-technologies-domain-security.yml
 - type: Website
